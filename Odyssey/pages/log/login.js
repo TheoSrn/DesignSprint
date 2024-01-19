@@ -4,9 +4,9 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 import { useNavigation } from '@react-navigation/native';
 import CheckboxComponent from '../Components/CheckBoxComponent'
 
-const LoginScreen = () => {
+const Login = ({ navigation }) => {
 
-//   const navigation = useNavigation();
+  const navigation = useNavigation();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -24,18 +24,23 @@ const LoginScreen = () => {
 
   const handleLogin = async () => {
     console.log('Login Pressed');
-    // navigation.navigate('ACCUEIL');
+    navigation.navigate('ACCUEIL');
   };
 
   const ForgotPassword = async () => {
     console.log('Login Pressed');
-  };
+};
+
+const BackArrow = async () => {
+    navigation.navigate('PRELOGIN');
+    console.log('Back arrow pressed');
+  }
 
   return (
     <View style={styles.container}>
 
         <View style={styles.content}>
-          <TouchableOpacity style={styles.BackArrow}>
+          <TouchableOpacity style={styles.BackArrow} onPress={BackArrow}>
             <Image
               source={require('../../assets/back_arrow.png')}
             />
@@ -187,4 +192,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LoginScreen;
+export default Login;

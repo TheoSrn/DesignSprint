@@ -13,9 +13,9 @@ const PreLogin = ({ navigation }) => {
 //   };
   return (
       <View style={styles.Container}>
-        <Image style={styles.goute} source={require('../../assets/El_info.png')} />
+        <Image style={styles.goutte} source={require('../../assets/El_info.png')} />
         <Text style={styles.title}>Odyssey</Text>
-        <Text style={styles.text}>Apprendre des langues où et quand vous le souhaiter. C'est gratuit et pour toujours</Text>
+        <Text style={styles.text}>Apprendre n'importe quelle langue où et quand vous le souhaiter. C'est gratuit et pour toujours</Text>
         <TouchableOpacity onPress={handleLogin} style={styles.buttonInscription}>
           <Text style={styles.textInscription}>Commencer</Text>
         </TouchableOpacity>
@@ -27,50 +27,56 @@ const PreLogin = ({ navigation }) => {
 };
 const styles = StyleSheet.create({
   Container: {
-    backgroundColor: '#FFF',
     flex: 1,
+    backgroundColor: '#FFF',
     alignItems: 'center',
     padding: '5%',
   },
-  goute: {
-    aspectRatio: 1/1,
-    marginTop: hp('5%'),
-    width: wp('70%'),
-    height: hp('32%'),
+  goutte: {
+    aspectRatio: 67/82,
+    marginTop: hp('11%'),
+    width: '55%',
+    height: '30%',
   },
   title: {
+    marginTop: hp('5%'),
     color: '#000',
     fontWeight: 'bold',
-    fontSize: '',
+    fontSize: 40,
   },
   text: {
+    marginTop: hp('5%'),
     color: '#000',
-    fontSize: '',
+    fontSize: 20,
+    textAlign: 'center',
     // fontWeight: 'bold',
   },
   buttonInscription: {
     borderRadius: 30,
     backgroundColor: '#6949FF',
-    paddingVertical: hp('1.8%'),
-    paddingHorizontal: wp('30%'),
+    paddingVertical: hp('2.5%'),
+    paddingHorizontal: wp('35%'),
     justifyContent: 'center',
-    marginTop: hp('5%'),
+    marginTop: hp('8%'),
   },
   buttonLogin: {
     borderRadius: 30,
     backgroundColor: '#F0EDFF',
-    paddingVertical: hp('1.8%'),
-    paddingHorizontal: wp('30%'),
+    paddingVertical: hp('2.5%'),
+    paddingHorizontal: wp('29%'),
     justifyContent: 'center',
     marginTop: 10,
+    // width: 20,
   },
   textInscription: {
     color: '#F0EDFF',
-    // fontWeight: 'bold',
+    fontWeight: 'bold',
+    fontSize: 15,
   },
   textLogin: {
     color: '#6949FF',
-    // fontWeight: 'bold',
+    fontWeight: 'bold',
+    fontSize: 15,
   },
 });
 
