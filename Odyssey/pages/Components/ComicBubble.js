@@ -14,9 +14,9 @@ const styles = StyleSheet.create({
   bubbleContainer: {
     backgroundColor: '#f0f0f0',
     borderRadius: 10,
-    padding: 10,
+    padding: 11,
     marginTop: 50,
-    marginBottom: -10,
+    marginBottom: -60,
     maxWidth: '70%',
     position: 'relative',
   },

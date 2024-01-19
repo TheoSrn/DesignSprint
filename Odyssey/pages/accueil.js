@@ -6,16 +6,16 @@ import Footer from './Components/Footer';
 
 const Accueil = ({ navigation }) => {
   const handleLogin = () => {
-    navigation.navigate('LOGIN');
+    navigation.navigate('EXE1');
   };
   const handleEx1 = () => {
-    navigation.navigate('LOGIN');
+    navigation.navigate('EXE1');
   };
   const handleEx2 = () => {
-    navigation.navigate('LOGIN');
+    navigation.navigate('EXE1');
   };
   const handleEx3 = () => {
-    navigation.navigate('LOGIN');
+    navigation.navigate('EXE1');
   };
 
 //   const handleInscription = () => {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import ComicBubble from '../Components/ComicBubble';
 // import { NavigationContainer } from '@react-navigation/native';
 
 const PreLogin = ({ navigation }) => {
@@ -11,8 +12,10 @@ const PreLogin = ({ navigation }) => {
 //   const handleInscription = () => {
 //     navigation.navigate('INSCRIPTION');
 //   };
+
   return (
       <View style={styles.Container}>
+        <ComicBubble text="Salut! je sui El!" />
         <Image style={styles.goutte} source={require('../../assets/El_info.png')} />
         <Text style={styles.title}>Odyssey</Text>
         <Text style={styles.text}>Apprendre n'importe quelle langue où et quand vous le souhaiter. C'est gratuit et pour toujours</Text>
