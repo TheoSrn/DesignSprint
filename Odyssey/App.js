@@ -20,7 +20,7 @@ const App = () => {
           <Stack.Screen name="LOGIN" component={Login} />
           <Stack.Screen name="ACCUEIL" component={Accueil} />
           <Stack.Screen name="EXE1" component={Ex1} />
-          {/* <Stack.Screen name="PROFIL" component={Profil} /> */}
+          <Stack.Screen name="PROFIL" component={Profil} />
           {/* <Stack.Screen name="EXE2" component={Ex2} /> */}
           {/* <Stack.Screen name="EXE3" component={Ex3} /> */}
         </Stack.Navigator>
