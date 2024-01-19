@@ -6,8 +6,6 @@ import CheckboxComponent from '../Components/CheckBoxComponent'
 
 const Login = ({ navigation }) => {
 
-  const navigation = useNavigation();
-
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
