@@ -24,7 +24,7 @@ export default function Footer({ navigation }) {
   const styles = StyleSheet.create({
     footer: {
       flex: 1,
-      // backgroundColor: '#d3d3d3',
+      backgroundColor: '#FFF',
       padding: 30,
       alignItems: 'center',
       height: 100,
@@ -32,7 +32,7 @@ export default function Footer({ navigation }) {
       flexDirection: 'row',
       justifyContent: 'space-between',
       position: 'absolute',
-      bottom: 0,
+      bottom: -10,
     },
     footerElements: {
       height: 30,

@@ -1,10 +1,20 @@
 import React from 'react';
-import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, Image, TouchableOpacity, ImageBackground } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import Footer from './Components/Footer';
 // import { NavigationContainer } from '@react-navigation/native';
 
 const Accueil = ({ navigation }) => {
   const handleLogin = () => {
+    navigation.navigate('LOGIN');
+  };
+  const handleEx1 = () => {
+    navigation.navigate('LOGIN');
+  };
+  const handleEx2 = () => {
+    navigation.navigate('LOGIN');
+  };
+  const handleEx3 = () => {
     navigation.navigate('LOGIN');
   };
 
@@ -12,23 +22,71 @@ const Accueil = ({ navigation }) => {
 //     navigation.navigate('INSCRIPTION');
 //   };
   return (
-      <View style={styles.Container}>
-        <Image style={styles.goutte} source={require('../assets/El_info.png')} />
-      </View>
+    <ImageBackground
+    source={require('../assets/ocean.png')}
+    style={styles.backgroundImageOcean}
+    >
+    <ImageBackground
+        source={require('../assets/sand.png')}
+        style={styles.backgroundImageSand}
+    >
+        <View style={styles.Container}>
+            <TouchableOpacity onPress={handleEx1} style={styles.island1}>
+                <Image style={styles.island} source={require('../assets/island.png')}></Image>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={handleEx2} style={styles.island2}>
+                <Image style={styles.island} source={require('../assets/island.png')}></Image>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={handleEx3} style={styles.island3}>
+                <Image style={styles.island} source={require('../assets/island.png')}></Image>
+            </TouchableOpacity>
+            <Footer navigation={navigation}/>
+        </View>
+ 
+      </ImageBackground>
+      </ImageBackground>
     );
 };
 const styles = StyleSheet.create({
+    backgroundImageSand: {
+        flex: 1,
+        width: '-10%',
+        height: '22%',
+        top: '-1%',
+        resizeMode: 'cover',
+        justifyContent: 'center',
+        // position: 'absolute',
+      },
+      backgroundImageOcean: {
+        flex: 1,
+        resizeMode: 'cover',
+        justifyContent: 'center',
+      },
   Container: {
     flex: 1,
-    backgroundColor: '#FFF',
+    // backgroundColor: '#FFF',
     alignItems: 'center',
     padding: '5%',
   },
-  goutte: {
+  island: {
     aspectRatio: 67/82,
     marginTop: hp('11%'),
     width: '55%',
     height: '30%',
+  },
+  island1: {
+    aspectRatio: 67/82,
+    top: 0,
+  },
+  island2: {
+    aspectRatio: 67/82,
+    right: -200,
+    top: -150,
+  },
+  island3: {
+    aspectRatio: 67/82,
+    left: 15,
+    top: -325,
   },
   title: {
     marginTop: hp('5%'),
